@@ -1,0 +1,12 @@
+4. Selección de Características por Varianza
+Contexto: Tienes un dataset de sensores de alta dimensión. Muchos sensores están estáticos o tienen variaciones insignificantes que solo aportan ruido. Debes eliminar automáticamente las columnas cuya varianza sea menor a un umbral.
+
+Nombre de la función: seleccionar_sensores
+
+Argumentos: * X (numpy.ndarray): Matriz de características (sensores).
+
+umbral (float): Valor mínimo de varianza permitido.
+
+Retorno: Un numpy.ndarray con la matriz reducida (solo las columnas que superan el umbral).
+
+Lógica: Implementar VarianceThreshold de sklearn.feature_selection para transformar la matriz de entrada.

@@ -1,0 +1,10 @@
+2. Ingeniería de Características: Codificación de Frecuencia
+Contexto: Tienes un dataset de logística con miles de ciudades de destino. Como el One-Hot Encoding crearía demasiadas columnas, decides reemplazar cada ciudad por su frecuencia relativa (porcentaje de aparición) en el dataset.
+
+Nombre de la función: encode_frecuencia
+
+Argumentos: * df (pandas.DataFrame): DataFrame con una columna llamada 'ciudad'.
+
+Retorno: Un numpy.ndarray (float) con los valores de frecuencia mapeados para cada fila.
+
+Lógica: Calcular la cuenta de cada ciudad, dividirla por el total de registros y mapear esos valores de vuelta al array original usando numpy o pandas.

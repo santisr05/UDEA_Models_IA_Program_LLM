@@ -1,0 +1,12 @@
+1. Detección de Outliers en Precios de ViviendaContexto: 
+Trabajas para una inmobiliaria y necesitas limpiar un dataset de precios antes de entrenar un modelo. Los valores atípicos (outliers) pueden sesgar las predicciones, por lo que usarás el Rango Intercuartílico (IQR) para identificarlos.
+
+Nombre de la función: filtrar_outliers_iqr
+Argumentos: 
+* df (pandas.DataFrame): DataFrame con una columna llamada 'precio'.
+factor (float): Multiplicador para el cálculo del límite (típicamente 1.5).
+
+Retorno: Un numpy.ndarray que contenga únicamente los precios que NO son considerados outliers.
+
+Lógica: Calcular Q1, Q3 y el IQR = Q3 - Q1. 
+Filtrar los valores fuera del rango [Q1 - factor x IQR, Q3 + factor x IQR].

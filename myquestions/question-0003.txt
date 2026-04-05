@@ -1,0 +1,12 @@
+3. Evaluación de Clasificación Multinivel (F1-Score)
+Contexto: Estás entrenando un modelo para clasificar tipos de fallos en maquinaria (Clase 0, 1 o 2). Debido a que las clases están desbalanceadas, no puedes usar el Accuracy simple y debes calcular el F1-Score con un promedio ponderado.
+
+Nombre de la función: calcular_f1_ponderado
+
+Argumentos: * y_true (list o numpy.ndarray): Etiquetas reales.
+
+y_pred (list o numpy.ndarray): Predicciones del modelo.
+
+Retorno: Un valor numérico float que represente el F1-Score ponderado.
+
+Lógica: Utilizar f1_score de sklearn.metrics configurando el parámetro average='weighted'.
