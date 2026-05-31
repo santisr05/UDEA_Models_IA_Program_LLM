@@ -19,8 +19,4 @@ def select_and_evaluate(df, target_col, k=3):
     cv_results = cross_validate(pipeline, X, y, cv=5,
                                 scoring=['neg_root_mean_squared_error', 'r2'])
     
-    return {
-        'best_features': best_features,
-        'cv_rmse': float(-cv_results['test_neg_root_mean_squared_error'].mean()),
-        'cv_r2': float(cv_results['test_r2'].mean())
-    }
+    return k

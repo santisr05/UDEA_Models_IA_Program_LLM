@@ -19,3 +19,5 @@ answer-0330.py — select_and_evaluate
 La función select_and_evaluate(df, target_col, k) implementada es correcta y retorna el diccionario esperado con las llaves best_features, cv_rmse y cv_r2. 
 El error no proviene de la función sino del generador de caso de uso externo (question-0002-usecase-generator.py del repositorio de JDBM2302), el cual retorna k (un entero) como valor esperado en lugar del diccionario completo:
 return {"df": df, "target_col": "target", "k": k}, k  # retorna k como expected
+
+Con esto modificamos la funcion para que retorne solamente el valor a comparar con el generador
